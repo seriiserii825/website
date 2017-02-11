@@ -1,0 +1,93 @@
+
+body{
+  .opensans;
+  color: @text-color;
+  background: @white;
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.table td.border{
+  border-color: transparent;
+}
+/*btn*/
+.btn{
+  .inline-block;
+  .line-height(40px);
+  line-height: 34px;
+  padding: 0 35px;
+  font-size: 24px;
+  border-width: 2px;
+  border-style: solid;
+}
+a.btn:hover,
+a.btn:focus{
+  text-decoration: none;
+}
+a.btn-regular{
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 190px;
+  text-align: center;
+  color: @white;
+  border-color: @white;
+  background: transparent;
+  &:hover{
+    color: @black;
+    border-color: @black;
+    background: @white;
+  }
+}
+a.btn-black{
+  color: @black;
+  border-color: @black;
+  transition: all .5s;
+  &:hover{
+    color: @white;
+    background: #000;
+  }
+}
+.section{
+  padding: 80px 0;
+}
+.section__title{
+  text-align: center;
+  font-weight: bold;
+}
+.text-bold{
+  font-weight: bold;
+}
+/*table*/
+.table {
+  position: absolute;
+  border-collapse: separate;
+  border-spacing: 10px;
+  position: absolute;
+  transform: rotate(-45deg);
+  .border-none{
+    border-color: transparent;
+  }
+  td{
+    position: relative;
+    width: 132px;
+    height: 132px;
+    border: 1px solid @border-gray;
+  }
+  .wrap{
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    transform-origin: left;
+    transform: rotate(45deg);
+    //background: yellow;
+  }
+  .table__link{
+
+  }
+}

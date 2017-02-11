@@ -1,0 +1,12 @@
+body {
+  background: #666;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
