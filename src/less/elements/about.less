@@ -1,5 +1,109 @@
-.about{
-  .section__title{
+.about {
+  position: relative;
+  /*about__item*/
+  &__item {
+    margin-bottom: 135px;
+    &.right {
+      margin-top: 135px;
+      @media screen and (max-width: @lg-width ) {
+        margin-left: 50px;
+      }
+      @media screen and (max-width: @md-width ) {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+  }
+  /*about.date*/
+  .date{
+    font-size: 24px;
+    &.bottom{
+      margin-top: -50px;
+    }
+    @media screen and (min-width: @md-width ) {
+      display: none;
+    }
+  }
+  /*section__title*/
+  .section__title {
     margin-bottom: 80px;
+  }
+  /*tree*/
+  .tree {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    margin-left: -1px;
+    width: 3px;
+    height: 555px;
+    background: @border-blue-dark;
+    @media screen and (max-width: @md-width ) {
+      display: none;
+    }
+    /*rhombus*/
+    .rhombus {
+      position: absolute;
+      width: 135px;
+      height: 135px;
+      font-size: 24px;
+      /*rhombus after*/
+      &::after {
+        content: "";
+        position: absolute;
+        top: -48px;
+        left: -20px;
+        width: 135px;
+        height: 135px;
+        border: 1px solid #555554;
+        transform-origin: center;
+        transform: rotate(-45deg);
+      }
+      /*rhombus::left,right,down*/
+      &.left::before,
+      &.right::before,
+      &.down::before {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: @border-blue-dark;
+        border-radius: 50%;
+      }
+      &.left {
+        right: 10px;
+        &::before {
+          top: 12px;
+          right: -14px;
+        }
+      }
+      &.right {
+        left: 50px;
+        &::before {
+          top: 11px;
+          left: -57px;
+        }
+      }
+      &.down {
+        bottom: -210px;
+        left: -50px;
+        &::after {
+          top: -35px;
+          left: -17px;
+        }
+        &::before {
+          top: -85px;
+          left: 44px;
+        }
+      }
+      &.first {
+        top: 130px;
+      }
+      &.second {
+        top: 260px;
+      }
+      &.third {
+        top: 375px;
+      }
+    }
   }
 }
