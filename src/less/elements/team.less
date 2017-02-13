@@ -1,0 +1,40 @@
+.team{
+  background: @bg-gray;
+  .section__title{
+    margin-bottom: 80px;
+  }
+  .services__about{
+    margin-top: 100px;
+  }
+  .table{
+    @media screen and (max-width: @lg-width ) {
+      display: none;
+    }
+    @media screen and (min-width: @lg-width ) {
+      display: block!important;
+    }
+  }
+  .table td{
+    overflow: hidden;
+  }
+  img{
+    position: relative;
+    top: -88px;
+    left: -52px;
+    max-width: none;
+  }
+  .services__list{
+    background: none;
+    @media screen and (min-width: @lg-width) {
+      display: none;
+    }
+    @media screen and (max-width: @lg-width) {
+      display: block!important;
+    }
+    &-link{
+      background: none;
+      border-bottom: none;
+
+    }
+  }
+}
