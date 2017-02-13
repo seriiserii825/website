@@ -9,8 +9,9 @@
     left: 0;
     padding: 50px 0;
     width: 100%;
+    z-index: 1000;
     @media screen and (max-width: @sm-width ) {
-      padding-top: 0;
+      padding: 0;
     }
   }
   .logo{
@@ -95,6 +96,9 @@
     font-size: 48px;
     color: @white;
     text-align: center;
+    @media screen and (max-width: @md-width ) {
+      margin-top: 180px;
+    }
   }
   .line{
     margin: 0 auto;

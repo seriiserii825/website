@@ -4,6 +4,25 @@ $(function () {
         $('#js-main-menu').slideToggle();
     });
     
+    /*menu change bg on scroll*/
+    $(document).on('scroll', function () {
+        var documentOffset = $(this).scrollTop();
+        var show_main_menu = $('.main-header .show-main-menu');
+        var main_menu = $('.main-header .main-menu');
+        var main_menu_box = $('#js-main-menu-box');
+        var headerHeight = $('.main-header').innerHeight() - 100;
+
+        if(documentOffset > headerHeight){
+            $(main_menu_box).css({
+                'backgroundColor': 'black'
+            });
+        }else{
+            $(main_menu_box).css({
+                'backgroundColor': 'transparent'
+            });
+        }
+    });
+    
     /*main-slider
     * =========================*/
     $('#js-main-slider').slick({
@@ -32,7 +51,7 @@ $(function () {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 650,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -43,6 +62,7 @@ $(function () {
             // instead of a settings object
         ]
     });
-    
+
+
 
 });
