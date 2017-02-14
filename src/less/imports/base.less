@@ -23,6 +23,7 @@ body{
   border-style: solid;
 }
 a.btn:hover,
+input.btn:hover,
 a.btn:focus{
   text-decoration: none;
 }
@@ -41,7 +42,34 @@ a.btn-regular{
     background: @white;
   }
 }
+input.btn-regular,
+button.btn-regular{
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 190px;
+  text-align: center;
+  color: @white;
+  border-color: @white;
+  background: transparent;
+  cursor: pointer;
+  transition: all .5s;
+  &:hover{
+    color: @black;
+    border-color: @black;
+    background: @white;
+  }
+}
 a.btn-black{
+  color: @black;
+  border-color: @black;
+  transition: all .5s;
+  &:hover{
+    color: @white;
+    background: #000;
+  }
+}
+input.btn-black{
   color: @black;
   border-color: @black;
   transition: all .5s;
@@ -54,6 +82,7 @@ a.btn-black{
   padding: 80px 0;
 }
 .section__title{
+  margin-bottom: 80px;
   text-align: center;
   font-weight: bold;
 }
@@ -65,7 +94,6 @@ a.btn-black{
   position: absolute;
   border-collapse: separate;
   border-spacing: 10px;
-  position: absolute;
   transform: rotate(-45deg);
   .border-none{
     border-color: transparent;

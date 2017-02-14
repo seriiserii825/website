@@ -1,0 +1,68 @@
+.contacts{
+  color: @white;
+  background: url("../img/bg-contacts.jpg") no-repeat center;
+  background-size: cover;
+  &.section{
+    padding-top: 20px;
+  }
+  .container{
+    position: relative;
+  }
+  &__content-text{
+    font-size: 18px;
+    line-height: 20px;
+  }
+  &__content-title,
+  &__form-title{
+    margin-bottom: 35px;
+    .opensanslight;
+    font-size: 34px;
+    line-height: 36px;
+  }
+  &__input{
+    margin-bottom: 24px;
+    padding-left: 30px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: @black;
+    background: @white;
+    border: 1px solid @border-blue-dark;
+    box-sizing: border-box;
+    outline: none;
+  }
+  .form__textarea{
+    margin-bottom: 40px;
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 100%;
+    border: 1px solid @border-blue-dark;
+    outline: none;
+  }
+  &__buttons{
+    text-align: right;
+  }
+  input.btn-regular{
+    width: 110px;
+    .inline-block;
+    background-color: transparent;
+  }
+  .btn-up.btn-regular{
+    position: absolute;
+    bottom: -40px;
+    left: 40px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background-color: transparent;
+    .fa-chevron-up{
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      &:hover{
+        color: @black;
+      }
+    }
+  }
+}

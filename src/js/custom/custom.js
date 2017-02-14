@@ -7,14 +7,12 @@ $(function () {
     /*menu change bg on scroll*/
     $(document).on('scroll', function () {
         var documentOffset = $(this).scrollTop();
-        var show_main_menu = $('.main-header .show-main-menu');
-        var main_menu = $('.main-header .main-menu');
         var main_menu_box = $('#js-main-menu-box');
         var headerHeight = $('.main-header').innerHeight() - 100;
 
         if(documentOffset > headerHeight){
             $(main_menu_box).css({
-                'backgroundColor': 'black'
+                'backgroundColor': 'rgba(0,0,0,.65)'
             });
         }else{
             $(main_menu_box).css({
