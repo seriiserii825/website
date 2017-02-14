@@ -60,7 +60,33 @@ $(function () {
             // instead of a settings object
         ]
     });
+    
+    /*smooth scroll to the pages block*/
+    $('.js-main-menu__item').on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var current = $(this).attr('href');
+        var currentOffset = $(current).offset().top;
+        $('.js-main-menu__item').removeClass('active');
+        $this.addClass('active');
+        console.log($this);
 
+
+         $('html, body').animate({
+             scrollTop: currentOffset
+         }, 800);
+    });
+
+    /*scroll to head*/
+    $('.js-to-up').on('click', function () {
+        $('.js-main-menu__item').removeClass('active');
+        $('.js-main-menu__item:first-of-type').addClass('active');
+
+        var headerOffset = $('#js-header').offset().top;
+        $('html, body').animate({
+            scrollTop: headerOffset
+        }, 800);
+    })
 
 
 });
